@@ -1,0 +1,21 @@
+{
+  "name": "sarkari-form-studio",
+  "version": "1.0.0",
+  "description": "Private browser-based photo and document tools",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test",
+    "serve": "node scripts/serve.js",
+    "vendor": "node scripts/vendor.js",
+    "vendor-ai": "node scripts/vendor-ai.js",
+    "fetch-model": "node scripts/fetch-model.js"
+  },
+  "devDependencies": {
+    "heic2any": "0.0.4",
+    "onnxruntime-web": "1.30.0",
+    "pdf-lib": "1.17.1",
+    "pdfjs-dist": "3.11.174"
+  },
+  "engines": { "node": ">=20" }
+}

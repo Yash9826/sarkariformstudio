@@ -1,0 +1,13 @@
+{
+  "name": "SarkariFormStudio",
+  "short_name": "SarkariFormStudio",
+  "description": "Photo, PDF and file tools for forms. Works offline.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f8f8f5",
+  "theme_color": "#f8f8f5",
+  "icons": [
+    { "src": "assets/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
