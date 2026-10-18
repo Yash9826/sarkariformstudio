@@ -1,7 +1,7 @@
 /**
  * ExamPanel: pick an exam (merged by identical rules), then prepare each
  * required file (photo / signature / thumb / declaration) and download them
- * one by one or together as a ZIP.
+ * one by one or together as a ZIP. yash
  */
 (function (root) {
   'use strict';
