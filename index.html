@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SarkariFormStudio | Photo, PDF and File Tools for Government Forms</title>
+  <meta name="application-name" content="SarkariFormStudio">
+  <meta name="description" content="Edit photos and prepare exam files in your browser. Your files stay on your device.">
+  <meta property="og:title" content="SarkariFormStudio | Photo, PDF and File Tools for Government Forms">
+  <meta property="og:description" content="Edit photos and prepare exam files in your browser. Your files stay on your device.">
+  <link id="canonical-url" rel="canonical">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="SarkariFormStudio | Photo, PDF and File Tools for Government Forms">
+  <meta name="twitter:description" content="Edit photos and prepare exam files in your browser. Your files stay on your device.">
+  <script id="route-structured-data" type="application/ld+json"></script>
+  <meta name="theme-color" content="#f8f8f5">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="brand">
+      <img src="assets/icon.svg" alt="SarkariFormStudio" width="40" height="40">
+      <div>
+        <span class="brand-name" id="site-name">SarkariFormStudio</span>
+        <p id="site-tagline">Photo, PDF &amp; file tools for forms</p>
+      </div>
+    </div>
+    <div id="navigation-host" class="navigation-host"></div>
+    <div class="header-actions">
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark theme" title="Switch to dark theme">
+        <span class="theme-icon" aria-hidden="true">☾</span><span class="theme-label">Dark</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <nav id="breadcrumb" class="breadcrumb" aria-label="Breadcrumb"></nav>
+    <section id="page-content" class="page-content"></section>
+    <section id="panel-exam" data-app-panel="exam" aria-label="Exam photo resizer" hidden></section>
+    <section id="panel-general" data-app-panel="general" aria-label="Custom size cropper" hidden></section>
+    <section id="panel-check" data-app-panel="check" aria-label="File checker" hidden></section>
+    <section id="panel-tools" data-app-panel="tools" aria-label="Tools hub" hidden></section>
+    <section id="panel-photo-editor" data-app-panel="photo-editor" aria-label="Photo editor" hidden></section>
+    <noscript><p class="fatal">SarkariFormStudio needs JavaScript to resize pictures in your browser. Please enable it and reload.</p></noscript>
+  </main>
+
+  <div id="toasts" class="toasts" aria-live="polite"></div>
+
+  <footer>
+    <nav id="footer-links" class="footer-links" aria-label="Information pages"></nav>
+    <p id="footer-disclaimer">Not affiliated with any government body or exam authority.</p>
+  </footer>
+
+  <!-- core -->
+  <script src="src/core/Errors.js"></script>
+  <script src="src/core/Logger.js"></script>
+  <script src="src/core/PerfTimer.js"></script>
+  <script src="src/core/Units.js"></script>
+  <script src="src/core/SafeStorage.js"></script>
+  <!-- data + domain -->
+  <script src="data/exam-data.js"></script>
+  <script src="data/background-colors.js"></script>
+  <script src="data/photo-presets.js"></script>
+  <script src="data/site-config.js"></script>
+  <script src="data/tool-registry.js"></script>
+  <script src="data/model-manifest.js"></script>
+  <script src="src/domain/RuleProfile.js"></script>
+  <script src="src/domain/ExamRegistry.js"></script>
+  <script src="src/domain/RuleValidator.js"></script>
+  <!-- image + export -->
+  <script src="src/image/CropSession.js"></script>
+  <script src="src/image/EnhanceOptions.js"></script>
+  <script src="src/image/ColorMath.js"></script>
+  <script src="src/image/LevelsAdjuster.js"></script>
+  <script src="src/image/BoxBlur.js"></script>
+  <script src="src/image/MorphologyOps.js"></script>
+  <script src="src/image/InkExtractor.js"></script>
+  <script src="src/image/BackgroundMasker.js"></script>
+  <script src="src/image/DateFormatter.js"></script>
+  <script src="src/image/stages/ImageStage.js"></script>
+  <script src="src/image/stages/AdjustStage.js"></script>
+  <script src="src/image/stages/BackgroundStage.js"></script>
+  <script src="src/image/stages/SignatureCleanupStage.js"></script>
+  <script src="src/image/stages/DateStampStage.js"></script>
+  <script src="src/image/ProcessingPipeline.js"></script>
+  <script src="src/image/ImageLoader.js"></script>
+  <script src="src/image/ImageProcessor.js"></script>
+  <script src="src/image/JpegPadder.js"></script>
+  <script src="src/image/JpegCompressor.js"></script>
+  <script src="src/ai/GuidedFilter.js"></script>
+  <script src="src/ai/AlphaRefiner.js"></script>
+  <script src="src/ai/BrushMask.js"></script>
+  <script src="src/ai/Compositor.js"></script>
+  <script src="src/ai/CutoutCache.js"></script>
+  <script src="src/ai/ModelLoader.js"></script>
+  <script src="src/ai/OrtRuntimeConfig.js"></script>
+  <script src="src/ai/MatteWorkerClient.js"></script>
+  <script src="src/ai/CutoutService.js"></script>
+  <script src="src/export/ZipBuilder.js"></script>
+  <!-- local browser converters -->
+  <script src="src/ui/dom.js"></script>
+  <script src="src/tools/ByteSize.js"></script>
+  <script src="src/tools/PageRangeParser.js"></script>
+  <script src="src/tools/Converter.js"></script>
+  <script src="src/tools/ConverterRegistry.js"></script>
+  <script src="src/tools/DependencyLoader.js"></script>
+  <script src="src/tools/PdfEngine.js"></script>
+  <script src="src/tools/PdfBuilder.js"></script>
+  <script src="src/tools/PdfCompressionSearch.js"></script>
+  <script src="src/tools/ConverterUtils.js"></script>
+  <script src="src/tools/converters/ImageFormatConverter.js"></script>
+  <script src="src/tools/converters/HeicToJpgConverter.js"></script>
+  <script src="src/tools/converters/ImagesToPdfConverter.js"></script>
+  <script src="src/tools/converters/PdfMergeConverter.js"></script>
+  <script src="src/tools/converters/PdfSplitConverter.js"></script>
+  <script src="src/tools/converters/PdfOrganizeConverter.js"></script>
+  <script src="src/tools/converters/PdfToImagesConverter.js"></script>
+  <script src="src/tools/converters/PdfCompressConverter.js"></script>
+  <script src="src/tools/converters/ScanToPdfConverter.js"></script>
+  <!-- ui -->
+  <script src="src/ui/Notifier.js"></script>
+  <script src="src/ui/CropperView.js"></script>
+  <script src="src/ui/EnhancePanel.js"></script>
+  <script src="src/ui/PreviewRenderer.js"></script>
+  <script src="src/ui/Workspace.js"></script>
+  <script src="src/ui/ExamPanel.js"></script>
+  <script src="src/ui/GeneralPanel.js"></script>
+  <script src="src/ui/CheckPanel.js"></script>
+  <script src="src/ui/BackgroundStudioPanel.js"></script>
+  <script src="src/ui/ConverterForm.js"></script>
+  <script src="src/ui/FileListView.js"></script>
+  <script src="src/ui/ToolsPanel.js"></script>
+  <script src="src/ui/ToolRouter.js"></script>
+  <script src="src/ui/SiteNavigation.js"></script>
+  <script src="src/ui/App.js"></script>
+  <script src="src/main.js"></script>
+</body>
+</html>
